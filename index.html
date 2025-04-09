@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ABB研究报告 | 供应链转型与战略进入机遇</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header Section -->
+        <header class="mb-12">
+            <div class="flex items-center justify-between mb-4">
+                <h1 class="text-3xl md:text-4xl font-bold">ABB研究报告</h1>
+                <div class="text-right">
+                    <p class="text-sm text-gray-500">报告日期：2025年3月</p>
+                    <p class="text-sm text-gray-500">机密文件</p>
+                </div>
+            </div>
+            <div class="bg-gray-100 p-5 rounded-lg">
+                <h2 class="text-xl md:text-2xl font-bold mb-3">供应链转型与战略进入机遇</h2>
+                <p class="text-gray-700">对ABB全球运营、供应链转型以及电气元件和材料制造商战略进入建议的综合分析。</p>
+            </div>
+        </header>
+
+        <!-- Executive Summary -->
+        <section class="mb-12">
+            <div class="border-b border-gray-200 mb-4">
+                <h2 class="text-2xl font-bold mb-2">执行摘要</h2>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                <p class="mb-4">ABB作为电气化和自动化技术的全球领导者，正在积极重塑其供应链，将重点从中国转向越南、欧洲和美国。本报告分析了这些转变，考察了ABB的全球布局，并为铜母线、编织线、电缆、光纤和金属触点的制造商提供了进入ABB供应商生态系统的战略路线图。</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <i data-lucide="map-pin" class="w-5 h-5 mr-2 text-gray-700"></i>
+                            <h3 class="font-semibold">地理转移</h3>
+                        </div>
+                        <p class="text-sm text-gray-700">ABB正在将制造业从中国多元化到越南、欧洲和美国，这是由供应链弹性要求和区域市场准入驱动的。</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <i data-lucide="package" class="w-5 h-5 mr-2 text-gray-700"></i>
+                            <h3 class="font-semibold">材料需求</h3>
+                        </div>
+                        <p class="text-sm text-gray-700">关键材料包括用于电气化的铜元件、用于机器人的专用布线，以及符合ABB碳减排目标的可持续材料。</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <i data-lucide="target" class="w-5 h-5 mr-2 text-gray-700"></i>
+                            <h3 class="font-semibold">进入策略</h3>
+                        </div>
+                        <p class="text-sm text-gray-700">最佳进入点是通过波兰业务，利用欧洲制造资质，然后扩展到符合ABB投资重点的美国设施。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Supply Chain Transformation -->
+        <section class="mb-12">
+            <div class="border-b border-gray-200 mb-4">
+                <h2 class="text-2xl font-bold mb-2">全球供应链转型</h2>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                <p class="mb-6">ABB正在战略性地重塑其全球供应链，以增强弹性、降低地缘政治风险并优化区域运营。主要转变包括：</p>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">从中国到越南的转型</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="mb-4">ABB正在逐步将制造能力从中国转移到越南，特别是用于机器人、电气化产品和过程自动化系统的组件。这一转变是ABB"中国+1"战略的一部分，该战略在保持中国业务的同时发展替代制造中心。</p>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                <li>扩大越南电子元件和组件的制造</li>
+                                <li>在越南发展本地供应商网络以支持运营</li>
+                                <li>保持中国的研发和高价值制造，同时转移劳动密集型生产</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <canvas id="chinaToVietnamChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">欧洲制造业再投资</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <canvas id="europeanInvestmentChart" width="400" height="300"></canvas>
+                        </div>
+                        <div>
+                            <p class="mb-4">ABB正在显著扩大其欧洲制造足迹，投资于自动化、电气化和运动控制设施。这一战略旨在缩短供应链并加强与欧洲客户的接近度。</p>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                <li>在波兰投资超过1亿美元用于电气元件制造</li>
+                                <li>扩大瑞典的机器人设施和芬兰的自动化系统</li>
+                                <li>在意大利和瑞士新建电气化产品设施</li>
+                                <li>专注于具有先进制造技术的数字工厂</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">美国制造业扩张</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="mb-4">ABB已承诺大幅扩张美国制造业，这是由基础设施投资、回流趋势和《通胀削减法案》的激励措施推动的。主要项目包括：</p>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                <li>在田纳西州和密西西比州投资1.2亿美元建设新的电气配电设备设施</li>
+                                <li>在多个州扩大现有运动控制和机器人设施</li>
+                                <li>新建专注于电网技术和电气化的研发中心</li>
+                                <li>与美国供应商建立战略伙伴关系以加强国内供应链</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <canvas id="usExpansionChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg mt-4">
+                    <div class="flex items-center mb-2">
+                        <i data-lucide="alert-triangle" class="w-5 h-5 mr-2 text-gray-700"></i>
+                        <h3 class="font-semibold">关键供应链驱动因素</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="text-sm">
+                            <h4 class="font-medium mb-1">风险分散</h4>
+                            <p class="text-gray-700">减少对单一国家制造的依赖，以降低地缘政治和贸易风险</p>
+                        </div>
+                        <div class="text-sm">
+                            <h4 class="font-medium mb-1">区域生产</h4>
+                            <p class="text-gray-700">强调在更接近终端市场的地方制造，以降低物流成本和交付时间</p>
+                        </div>
+                        <div class="text-sm">
+                            <h4 class="font-medium mb-1">可持续发展目标</h4>
+                            <p class="text-gray-700">重新配置供应链以减少碳足迹并实现排放目标</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABB Global Business Presence -->
+        <section class="mb-12">
+            <div class="border-b border-gray-200 mb-4">
+                <h2 class="text-2xl font-bold mb-2">ABB全球业务布局</h2>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                <p class="mb-6">ABB通过四个业务部门在全球运营，在欧洲、越南和美国具有重要布局：</p>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4">欧洲业务</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                        <div>
+                            <p class="mb-4">欧洲仍然是ABB的历史核心和最大区域市场，在整个欧洲大陆拥有广泛的制造、研发和业务运营：</p>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                <li>总部设在瑞士苏黎世，拥有主要企业职能</li>
+                                <li>在德国、瑞典、意大利、芬兰和波兰拥有重要制造基地</li>
+                                <li>专注于工业自动化、电气化和机器人的研发中心</li>
+                                <li>战略重点是将波兰作为电气元件的增长型制造中心</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <canvas id="europeBusinessChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium mb-2">主要欧洲业务领域</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+                            <div>
+                                <h5 class="font-semibold mb-1">电气化</h5>
+                                <p class="text-gray-700">配电产品、电气元件和安装材料</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-1">运动控制</h5>
+                                <p class="text-gray-700">电机、发电机、驱动器和相关工业应用服务</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-1">过程自动化</h5>
+                                <p class="text-gray-700">控制系统、测量产品和行业特定解决方案</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-1">机器人与自动化</h5>
+                                <p class="text-gray-700">工业机器人、自主系统和工厂自动化解决方案</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4">越南业务</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                        <div>
+                            <canvas id="vietnamGrowthChart" width="400" height="300"></canvas>
+                        </div>
+                        <div>
+                            <p class="mb-4">作为其供应链多元化战略的一部分，ABB迅速扩大了在越南的业务：</p>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                <li>在河内和胡志明市附近的工业园区设有制造设施</li>
+                                <li>专注于电气元件、低压产品和控制系统</li>
+                                <li>不断发展的工程和技术服务中心</li>
+                                <li>发展本地供应商网络以支持制造</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium mb-2">越南制造重点</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                            <div>
+                                <h5 class="font-semibold mb-1">电气元件</h5>
+                                <p class="text-gray-700">断路器、开关和控制产品</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-1">电子组件</h5>
+                                <p class="text-gray-700">控制系统组件和自动化模块</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-1">电力产品</h5>
+                                <p class="text-gray-700">配电设备和安装材料</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-4">美国业务</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                        <div>
+                            <p class="mb-4">美国是ABB最大的单一国家市场，拥有广泛的业务：</p>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                <li>在20个州拥有近40个制造设施</li>
+                                <li>美国总部位于北卡罗来纳州卡里</li>
+                                <li>九个主要研发中心，专注于电网技术、工业自动化和机器人</li>
+                                <li>年收入90亿美元（约占全球总额的27%）</li>
+                                <li>在全国拥有约17,000名员工</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <canvas id="usBusinessChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium mb-2">主要美国投资</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <h5 class="font-semibold mb-1">田纳西州塞尔默</h5>
+                                <p class="text-gray-700">投资8000万美元建设电气配电设备制造设施</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-1">密西西比州塞纳托比亚</h5>
+                                <p class="text-gray-700">投资4000万美元扩建低压断路器生产</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-1">威斯康星州新柏林</h5>
+                                <p class="text-gray-700">投资1亿美元建设工业电力驱动设施</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-1">新墨西哥州阿尔伯克基</h5>
+                                <p class="text-gray-700">投资4000万美元建设电网弹性技术中心</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABB Future Investment Plans -->
+        <section class="mb-12">
+            <div class="border-b border-gray-200 mb-4">
+                <h2 class="text-2xl font-bold mb-2">ABB未来投资计划</h2>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                <p class="mb-6">ABB已宣布重大未来投资，重点扩大制造能力、提升技术能力和发展可持续解决方案：</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <canvas id="investmentPlanChart" width="400" height="300"></canvas>
+                    </div>
+                    <div>
+                        <div class="bg-gray-50 p-4 rounded-lg h-full">
+                            <h3 class="font-semibold mb-3">战略投资重点（2023-2027）</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <div class="bg-blue-100 rounded-full p-1 mr-2 mt-1">
+                                        <i data-lucide="zap" class="w-4 h-4 text-blue-700"></i>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium">电气化扩张</span>
+                                        <p class="text-sm text-gray-700">投资超过12亿美元建设新设施和升级，重点发展电气配电设备、断路器和电动汽车充电系统</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-purple-100 rounded-full p-1 mr-2 mt-1">
+                                        <i data-lucide="cpu" class="w-4 h-4 text-purple-700"></i>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium">机器人技术发展</span>
+                                        <p class="text-sm text-gray-700">投资8亿美元建设下一代机器人设施，重点发展协作机器人和自动化制造解决方案</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-green-100 rounded-full p-1 mr-2 mt-1">
+                                        <i data-lucide="leaf" class="w-4 h-4 text-green-700"></i>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium">可持续发展计划</span>
+                                        <p class="text-sm text-gray-700">投资5亿美元用于可持续制造工艺、碳减排技术和循环经济解决方案</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-amber-100 rounded-full p-1 mr-2 mt-1">
+                                        <i data-lucide="globe" class="w-4 h-4 text-amber-700"></i>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium">区域供应链发展</span>
+                                        <p class="text-sm text-gray-700">投资6亿美元加强欧洲、东南亚和北美的区域供应链</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-4">区域投资重点</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead>
+                                <tr>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">地区</th>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">投资领域</th>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">时间表</th>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">战略意义</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">欧洲</td>
+                                    <td class="px-4 py-3">
+                                        <ul class="list-disc pl-5 text-sm">
+                                            <li>波兰和意大利的电气化制造</li>
+                                            <li>瑞典的机器人扩张</li>
+                                            <li>芬兰和德国的控制系统</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm">2023-2025</td>
+                                    <td class="px-4 py-3 text-sm">加强欧洲制造基地并降低区域客户的物流成本</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">越南</td>
+                                    <td class="px-4 py-3">
+                                        <ul class="list-disc pl-5 text-sm">
+                                            <li>电子元件制造</li>
+                                            <li>低压产品设施</li>
+                                            <li>供应商生态系统发展</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm">2023-2026</td>
+                                    <td class="px-4 py-3 text-sm">多元化亚洲制造布局并发展中国生产的替代方案</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">美国</td>
+                                    <td class="px-4 py-3">
+                                        <ul class="list-disc pl-5 text-sm">
+                                            <li>田纳西州和密西西比州的电气化设施</li>
+                                            <li>威斯康星州和北卡罗来纳州的运动控制</li>
+                                            <li>多个州的电网技术中心</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm">2023-2027</td>
+                                    <td class="px-4 py-3 text-sm">利用基础设施投资和《通胀削减法案》激励措施，同时加强美国市场地位</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg mt-6">
+                    <h3 class="font-semibold mb-3">技术投资重点</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+                        <div>
+                            <h4 class="font-semibold mb-1">电网弹性</h4>
+                            <p class="text-gray-700">配电、微电网和电网稳定性的下一代技术</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-1">电动交通</h4>
+                            <p class="text-gray-700">电动汽车充电基础设施、电池技术和电动交通解决方案</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-1">工业数字化</h4>
+                            <p class="text-gray-700">数字孪生、物联网连接和智能制造平台</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-1">能源效率</h4>
+                            <p class="text-gray-700">先进电机技术、能源管理系统和电力优化</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Purchasing Materials & Suppliers -->
+        <section class="mb-12">
+            <div class="border-b border-gray-200 mb-4">
+                <h2 class="text-2xl font-bold mb-2">关键采购材料和供应商</h2>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                <p class="mb-6">ABB的全球制造运营需要多样化的材料。了解这些材料和当前的供应商关系对于识别进入机会至关重要：</p>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">按业务部门划分的关键材料</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <canvas id="materialsBySegmentChart" width="400" height="350"></canvas>
+                        </div>
+                        <div>
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-blue-500 pl-3">
+                                    <h4 class="font-semibold mb-1">电气化</h4>
+                                    <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                                        <li><span class="font-medium">铜：</span>母线、连接器、绕组、触点</li>
+                                        <li><span class="font-medium">银/银合金：</span>开关和断路器的触点材料</li>
+                                        <li><span class="font-medium">工程塑料：</span>外壳、绝缘材料</li>
+                                        <li><span class="font-medium">钢和铝：</span>外壳、结构组件</li>
+                                    </ul>
+                                </div>
+                                <div class="border-l-4 border-green-500 pl-3">
+                                    <h4 class="font-semibold mb-1">运动控制</h4>
+                                    <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                                        <li><span class="font-medium">铜线：</span>电机绕组、编织连接</li>
+                                        <li><span class="font-medium">电工钢：</span>电机铁芯和叠片</li>
+                                        <li><span class="font-medium">永磁体：</span>电机组件</li>
+                                        <li><span class="font-medium">铝：</span>外壳和冷却组件</li>
+                                    </ul>
+                                </div>
+                                <div class="border-l-4 border-purple-500 pl-3">
+                                    <h4 class="font-semibold mb-1">机器人与自动化</h4>
+                                    <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                                        <li><span class="font-medium">精密组件：</span>齿轮、执行器、轴承</li>
+                                        <li><span class="font-medium">特种电缆：</span>机器人手臂布线、通信</li>
+                                        <li><span class="font-medium">传感器：</span>各种检测和测量</li>
+                                        <li><span class="font-medium">金属合金：</span>轻量化结构组件</li>
+                                    </ul>
+                                </div>
+                                <div class="border-l-4 border-amber-500 pl-3">
+                                    <h4 class="font-semibold mb-1">过程自动化</h4>
+                                    <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                                        <li><span class="font-medium">光纤：</span>通信网络</li>
+                                        <li><span class="font-medium">半导体组件：</span>控制系统</li>
+                                        <li><span class="font-medium">特种金属：</span>测量仪器</li>
+                                        <li><span class="font-medium">电缆：</span>信号和控制布线</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">铜组件需求</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="mb-4">作为电气设备的主要制造商，ABB需要大量的铜组件。公司还对低碳铜采购做出了明确承诺：</p>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                <li><span class="font-medium">铜母线：</span>广泛用于开关设备、配电设备和电力转换系统</li>
+                                <li><span class="font-medium">编织铜：</span>用于电机系统和电力设备的柔性连接</li>
+                                <li><span class="font-medium">铜绕组线：</span>用于电机、变压器和电磁设备</li>
+                                <li><span class="font-medium">可持续发展重点：</span>ABB已与Boliden和Dahrén等供应商合作进行低碳铜采购</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <canvas id="copperRequirementsChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">当前供应商关系</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead>
+                                <tr>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">材料类别</th>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">已知供应商</th>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">关系类型</th>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">进入机会</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">铜产品</td>
+                                    <td class="px-4 py-3 text-sm">
+                                        <ul class="list-disc pl-5">
+                                            <li>Boliden（采矿）</li>
+                                            <li>Dahrén（绕组线）</li>
+                                            <li>Luvata（空心导体）</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm">具有可持续发展重点的战略伙伴关系</td>
+                                    <td class="px-4 py-3 text-sm">高 - 强调可持续采购和区域供应</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">电缆和布线</td>
+                                    <td class="px-4 py-3 text-sm">
+                                        <ul class="list-disc pl-5">
+                                            <li>多个区域供应商</li>
+                                            <li>部分内部制造</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm">战略和交易混合型</td>
+                                    <td class="px-4 py-3 text-sm">中等 - 专注于自动化特种电缆</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">光纤</td>
+                                    <td class="px-4 py-3 text-sm">
+                                        <ul class="list-disc pl-5">
+                                            <li>具体供应商信息有限</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm">标准产品可能为交易型</td>
+                                    <td class="px-4 py-3 text-sm">中等 - 工业应用特种产品机会</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">金属触点</td>
+                                    <td class="px-4 py-3 text-sm">
+                                        <ul class="list-disc pl-5">
+                                            <li>各种区域供应商</li>
+                                            <li>多个专业制造商</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm">战略和区域供应商混合型</td>
+                                    <td class="px-4 py-3 text-sm">高 - 断路器和开关设备必需</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold mb-3">供应商选择标准</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                        <div>
+                            <h4 class="font-semibold mb-1">质量和技术</h4>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li>一致的质量标准</li>
+                                <li>技术规格遵守</li>
+                                <li>质量管理体系</li>
+                                <li>设计和工程能力</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-1">商业和运营</h4>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li>具有竞争力的价格结构</li>
+                                <li>交付可靠性</li>
+                                <li>供应链弹性</li>
+                                <li>财务稳定性</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-1">可持续性和合规性</h4>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li>环境管理体系</li>
+                                <li>碳足迹报告</li>
+                                <li>材料合规性（REACH、RoHS）</li>
+                                <li>遵守供应商行为准则</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Entry Recommendation -->
+        <section class="mb-12">
+            <div class="border-b border-gray-200 mb-4">
+                <h2 class="text-2xl font-bold mb-2">战略进入建议</h2>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                <p class="mb-6">对于在中国、波兰和越南设有基地的铜母线、编织线、电缆、光纤和金属触点制造商，我们建议采用分阶段战略方法，优先通过波兰进入，然后扩展到美国：</p>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">第一阶段：波兰市场进入（0-6个月）</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <canvas id="polishEntryStrategyChart" width="400" height="300"></canvas>
+                        </div>
+                        <div>
+                            <div class="bg-gray-50 p-4 rounded-lg h-full">
+                                <h4 class="font-semibold mb-3">关键行动</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <div class="bg-blue-100 rounded-full p-1 mr-2 mt-1">
+                                            <i data-lucide="file-text" class="w-4 h-4 text-blue-700"></i>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium">供应商注册</span>
+                                            <p class="text-sm text-gray-700">通过ABB供应商门户完成供应商注册流程，包括所有所需文件</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="bg-blue-100 rounded-full p-1 mr-2 mt-1">
+                                            <i data-lucide="target" class="w-4 h-4 text-blue-700"></i>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium">目标ABB波兰业务</span>
+                                            <p class="text-sm text-gray-700">专注于ABB波兰的电气化业务，该业务需要铜母线、触点和相关组件</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="bg-blue-100 rounded-full p-1 mr-2 mt-1">
+                                            <i data-lucide="package" class="w-4 h-4 text-blue-700"></i>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium">产品认证</span>
+                                            <p class="text-sm text-gray-700">提交产品样品和技术文件供ABB评估和测试</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="bg-blue-100 rounded-full p-1 mr-2 mt-1">
+                                            <i data-lucide="check-circle" class="w-4 h-4 text-blue-700"></i>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium">合规准备</span>
+                                            <p class="text-sm text-gray-700">确保产品符合ABB的可持续性和材料合规要求，包括低碳计划</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">第二阶段：欧洲扩张（6-18个月）</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <div class="bg-gray-50 p-4 rounded-lg h-full">
+                                <h4 class="font-semibold mb-3">战略方法</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <div class="bg-purple-100 rounded-full p-1 mr-2 mt-1">
+                                            <i data-lucide="trending-up" class="w-4 h-4 text-purple-700"></i>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium">扩大ABB关系</span>
+                                            <p class="text-sm text-gray-700">利用波兰初步成功扩展到邻近国家的ABB业务（德国、瑞典、芬兰）</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="bg-purple-100 rounded-full p-1 mr-2 mt-1">
+                                            <i data-lucide="layers" class="w-4 h-4 text-purple-700"></i>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium">产品组合扩展</span>
+                                            <p class="text-sm text-gray-700">开发符合ABB欧洲制造需求的专业产品</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="bg-purple-100 rounded-full p-1 mr-2 mt-1">
+                                            <i data-lucide="award" class="w-4 h-4 text-purple-700"></i>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium">可持续发展定位</span>
+                                            <p class="text-sm text-gray-700">定位为欧洲可持续铜解决方案专家，符合ABB的低碳承诺</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="bg-purple-100 rounded-full p-1 mr-2 mt-1">
+                                            <i data-lucide="truck" class="w-4 h-4 text-purple-700"></i>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium">供应链整合</span>
+                                            <p class="text-sm text-gray-700">发展物流能力，实现向多个ABB设施的高效泛欧交付</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <canvas id="europeanExpansionChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">第三阶段：美国市场进入（18个月以上）</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <canvas id="usEntryStrategyChart" width="400" height="300"></canvas>
+                        </div>
+                        <div>
+                            <div class="bg-gray-50 p-4 rounded-lg h-full">
+                                <h4 class="font-semibold mb-3">美国进入策略</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <div class="bg-amber-100 rounded-full p-1 mr-2 mt-1">
+                                            <i data-lucide="map-pin" class="w-4 h-4 text-amber-700"></i>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium">目标高优先级设施</span>
+                                            <p class="text-sm text-gray-700">专注于ABB在田纳西州和密西西比州的电气化产品战略投资</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="bg-amber-100 rounded-full p-1 mr-2 mt-1">
+                                            <i data-lucide="briefcase" class="w-4 h-4 text-amber-700"></i>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium">美国运营存在</span>
+                                            <p class="text-sm text-gray-700">在关键ABB设施附近建立仓储，评估轻组装运营潜力</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="bg-amber-100 rounded-full p-1 mr-2 mt-1">
+                                            <i data-lucide="clipboard-list" class="w-4 h-4 text-amber-700"></i>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium">利用欧洲资质</span>
+                                            <p class="text-sm text-gray-700">利用成功的欧洲供应历史作为美国市场进入的资质</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="bg-amber-100 rounded-full p-1 mr-2 mt-1">
+                                            <i data-lucide="git-merge" class="w-4 h-4 text-amber-700"></i>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium">长期制造策略</span>
+                                            <p class="text-sm text-gray-700">评估合资或收购机会以建立美国制造存在</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">产品-市场匹配策略</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead>
+                                <tr>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">产品线</th>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ABB业务部门</th>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ABB应用领域</th>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">战略优先级</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">铜母线</td>
+                                    <td class="px-4 py-3 text-sm">电气化</td>
+                                    <td class="px-4 py-3 text-sm">开关设备、配电设备、变电站</td>
+                                    <td class="px-4 py-3">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                            高优先级
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">金属触点</td>
+                                    <td class="px-4 py-3 text-sm">电气化</td>
+                                    <td class="px-4 py-3 text-sm">断路器、开关、接触器</td>
+                                    <td class="px-4 py-3">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                            高优先级
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">编织线</td>
+                                    <td class="px-4 py-3 text-sm">运动控制</td>
+                                    <td class="px-4 py-3 text-sm">电机连接、配电</td>
+                                    <td class="px-4 py-3">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
+                                            中等优先级
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">电缆</td>
+                                    <td class="px-4 py-3 text-sm">所有部门</td>
+                                    <td class="px-4 py-3 text-sm">电力、信号、控制应用</td>
+                                    <td class="px-4 py-3">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
+                                            中等优先级
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">光纤</td>
+                                    <td class="px-4 py-3 text-sm">过程自动化</td>
+                                    <td class="px-4 py-3 text-sm">通信网络、智能电网</td>
+                                    <td class="px-4 py-3">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                            较低优先级
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold mb-3">关键成功因素</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                        <div>
+                            <h4 class="font-semibold mb-1">技术卓越</h4>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li>满足ABB严格的质量标准</li>
+                                <li>展示材料可追溯性</li>
+                                <li>发展工程协作能力</li>
+                                <li>建立技术支持资源</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-1">运营准备</h4>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li>建立区域库存能力</li>
+                                <li>确保交付可靠性</li>
+                                <li>发展快速响应能力</li>
+                                <li>实施数字供应链连接</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-1">战略匹配</h4>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li>强调可持续发展资质</li>
+                                <li>符合ABB的区域供应策略</li>
+                                <li>提供超越组件的解决方案</li>
+                                <li>发展增值能力</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Entry Risk Assessment -->
+        <section class="mb-12">
+            <div class="border-b border-gray-200 mb-4">
+                <h2 class="text-2xl font-bold mb-2">市场进入风险评估</h2>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">主要风险因素</h3>
+                        <div class="space-y-4">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2">监管合规风险</h4>
+                                <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                                    <li>欧盟和美国的产品认证要求</li>
+                                    <li>环境法规和可持续发展标准</li>
+                                    <li>贸易政策和关税影响</li>
+                                    <li>知识产权保护要求</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2">运营风险</h4>
+                                <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                                    <li>供应链中断和物流挑战</li>
+                                    <li>质量控制一致性</li>
+                                    <li>技术支持和售后服务能力</li>
+                                    <li>本地化制造要求</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2">市场风险</h4>
+                                <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                                    <li>现有供应商竞争</li>
+                                    <li>价格压力和市场波动</li>
+                                    <li>客户关系建立时间</li>
+                                    <li>技术变革影响</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">风险缓解策略</h3>
+                        <div class="space-y-4">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2">监管合规</h4>
+                                <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                                    <li>提前获得产品认证</li>
+                                    <li>建立合规监控系统</li>
+                                    <li>与当地法律顾问合作</li>
+                                    <li>制定知识产权保护策略</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2">运营优化</h4>
+                                <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                                    <li>建立区域库存中心</li>
+                                    <li>实施质量管理体系</li>
+                                    <li>发展技术支持网络</li>
+                                    <li>评估本地制造选项</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2">市场策略</h4>
+                                <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                                    <li>差异化产品定位</li>
+                                    <li>灵活定价机制</li>
+                                    <li>建立长期客户关系</li>
+                                    <li>持续技术创新</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold mb-4">风险评估矩阵</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead>
+                                <tr>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">风险类别</th>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">可能性</th>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">影响程度</th>
+                                    <th class="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">优先级</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">产品认证延迟</td>
+                                    <td class="px-4 py-3 text-sm">中等</td>
+                                    <td class="px-4 py-3 text-sm">高</td>
+                                    <td class="px-4 py-3">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                                            高优先级
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">供应链中断</td>
+                                    <td class="px-4 py-3 text-sm">高</td>
+                                    <td class="px-4 py-3 text-sm">中等</td>
+                                    <td class="px-4 py-3">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                            中等优先级
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">价格竞争</td>
+                                    <td class="px-4 py-3 text-sm">高</td>
+                                    <td class="px-4 py-3 text-sm">高</td>
+                                    <td class="px-4 py-3">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                                            高优先级
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 whitespace-nowrap font-medium">技术变革</td>
+                                    <td class="px-4 py-3 text-sm">中等</td>
+                                    <td class="px-4 py-3 text-sm">中等</td>
+                                    <td class="px-4 py-3">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                            中等优先级
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="mb-12">
+            <div class="border-b border-gray-200 mb-4">
+                <h2 class="text-2xl font-bold mb-2">结论</h2>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                <div class="prose max-w-none">
+                    <p class="mb-4">ABB的全球供应链转型为铜母线、编织线、电缆、光纤和金属触点制造商提供了重要的市场进入机会。通过采用分阶段战略方法，优先通过波兰进入，然后扩展到欧洲和美国，供应商可以最大限度地降低风险，同时建立可持续的长期业务关系。</p>
+                    
+                    <p class="mb-4">成功的关键在于：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li>严格关注产品质量和技术标准</li>
+                        <li>建立强大的区域供应链能力</li>
+                        <li>发展可持续和环保的解决方案</li>
+                        <li>投资于本地化制造和技术支持</li>
+                    </ul>
+
+                    <p class="mb-4">通过遵循本报告中概述的战略建议，供应商可以：</p>
+                    <ul class="list-disc pl-5 mb-4 space-y-2">
+                        <li>降低市场进入风险</li>
+                        <li>建立竞争优势</li>
+                        <li>创造长期价值</li>
+                        <li>支持ABB的可持续发展目标</li>
+                    </ul>
+
+                    <p>建议供应商立即开始准备进入流程，重点关注产品认证、质量体系和供应链能力的建立。早期行动将有助于确保在ABB的供应链转型中获得有利地位。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-12 pt-6 border-t border-gray-200 text-sm text-gray-500 text-center">
+            <p>Built by Copper Joint.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="charts.js"></script>
+</body>
+</html>
